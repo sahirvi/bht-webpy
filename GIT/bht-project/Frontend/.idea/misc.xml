@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/jel/Desktop/BEUTH/Bloom/Code/Frontend/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2703125" />
+        <entry key="..\:/Users/jel/Desktop/BEUTH/Bloom/Code/Frontend/app/src/main/res/drawable/add.xml" value="0.171875" />
+        <entry key="..\:/Users/jel/Desktop/BEUTH/Bloom/Code/Frontend/app/src/main/res/drawable/autowater.xml" value="0.1421875" />
+        <entry key="..\:/Users/jel/Desktop/BEUTH/Bloom/Code/Frontend/app/src/main/res/drawable/cloud.xml" value="0.157" />
+        <entry key="..\:/Users/jel/Desktop/BEUTH/Bloom/Code/Frontend/app/src/main/res/drawable/connect_icon.xml" value="0.17239583333333333" />
+        <entry key="..\:/Users/jel/Desktop/BEUTH/Bloom/Code/Frontend/app/src/main/res/drawable/custom_autowater.xml" value="0.15833333333333333" />
+        <entry key="..\:/Users/jel/Desktop/BEUTH/Bloom/Code/Frontend/app/src/main/res/drawable/custom_btn.xml" value="0.14635416666666667" />
+        <entry key="..\:/Users/jel/Desktop/BEUTH/Bloom/Code/Frontend/app/src/main/res/drawable/custom_button.xml" value="0.15260416666666668" />
+        <entry key="..\:/Users/jel/Desktop/BEUTH/Bloom/Code/Frontend/app/src/main/res/drawable/custom_input.xml" value="0.10833333333333334" />
+        <entry key="..\:/Users/jel/Desktop/BEUTH/Bloom/Code/Frontend/app/src/main/res/drawable/custom_manualwater.xml" value="0.2703125" />
+        <entry key="..\:/Users/jel/Desktop/BEUTH/Bloom/Code/Frontend/app/src/main/res/drawable/custom_warn.xml" value="0.15833333333333333" />
+        <entry key="..\:/Users/jel/Desktop/BEUTH/Bloom/Code/Frontend/app/src/main/res/drawable/custom_watering_btn.xml" value="0.14635416666666667" />
+        <entry key="..\:/Users/jel/Desktop/BEUTH/Bloom/Code/Frontend/app/src/main/res/drawable/custom_watering_btn_stop.xml" value="0.14635416666666667" />
+        <entry key="..\:/Users/jel/Desktop/BEUTH/Bloom/Code/Frontend/app/src/main/res/drawable/elevated_card.xml" value="0.14947916666666666" />
+        <entry key="..\:/Users/jel/Desktop/BEUTH/Bloom/Code/Frontend/app/src/main/res/drawable/forward_icon.xml" value="0.16770833333333332" />
+        <entry key="..\:/Users/jel/Desktop/BEUTH/Bloom/Code/Frontend/app/src/main/res/drawable/frag_box.xml" value="0.2703125" />
+        <entry key="..\:/Users/jel/Desktop/BEUTH/Bloom/Code/Frontend/app/src/main/res/drawable/gradientblue.xml" value="0.1" />
+        <entry key="..\:/Users/jel/Desktop/BEUTH/Bloom/Code/Frontend/app/src/main/res/drawable/gradientgreen.xml" value="0.1" />
+        <entry key="..\:/Users/jel/Desktop/BEUTH/Bloom/Code/Frontend/app/src/main/res/drawable/gradientyellow.xml" value="0.1" />
+        <entry key="..\:/Users/jel/Desktop/BEUTH/Bloom/Code/Frontend/app/src/main/res/drawable/ic_baseline_close_24.xml" value="0.15104166666666666" />
+        <entry key="..\:/Users/jel/Desktop/BEUTH/Bloom/Code/Frontend/app/src/main/res/drawable/ic_baseline_menu_24.xml" value="0.2703125" />
+        <entry key="..\:/Users/jel/Desktop/BEUTH/Bloom/Code/Frontend/app/src/main/res/drawable/ic_baseline_warning_24.xml" value="0.16770833333333332" />
+        <entry key="..\:/Users/jel/Desktop/BEUTH/Bloom/Code/Frontend/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2703125" />
+        <entry key="..\:/Users/jel/Desktop/BEUTH/Bloom/Code/Frontend/app/src/main/res/drawable/ic_splashscreen.xml" value="0.2703125" />
+        <entry key="..\:/Users/jel/Desktop/BEUTH/Bloom/Code/Frontend/app/src/main/res/drawable/manualwater.xml" value="0.1421875" />
+        <entry key="..\:/Users/jel/Desktop/BEUTH/Bloom/Code/Frontend/app/src/main/res/layout/activity_button.xml" value="0.16041666666666668" />
+        <entry key="..\:/Users/jel/Desktop/BEUTH/Bloom/Code/Frontend/app/src/main/res/layout/activity_dashboard.xml" value="0.264" />
+        <entry key="..\:/Users/jel/Desktop/BEUTH/Bloom/Code/Frontend/app/src/main/res/layout/activity_home.xml" value="0.12183383991894631" />
+        <entry key="..\:/Users/jel/Desktop/BEUTH/Bloom/Code/Frontend/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/jel/Desktop/BEUTH/Bloom/Code/Frontend/app/src/main/res/layout/activity_onboarding.xml" value="0.2" />
+        <entry key="..\:/Users/jel/Desktop/BEUTH/Bloom/Code/Frontend/app/src/main/res/layout/activity_start.xml" value="0.264" />
+        <entry key="..\:/Users/jel/Desktop/BEUTH/Bloom/Code/Frontend/app/src/main/res/layout/activity_welcome.xml" value="0.21865889212827988" />
+        <entry key="..\:/Users/jel/Desktop/BEUTH/Bloom/Code/Frontend/app/src/main/res/layout/activity_zone.xml" value="0.13802083333333334" />
+        <entry key="..\:/Users/jel/Desktop/BEUTH/Bloom/Code/Frontend/app/src/main/res/layout/activity_zone_detail.xml" value="0.264" />
+        <entry key="..\:/Users/jel/Desktop/BEUTH/Bloom/Code/Frontend/app/src/main/res/layout/activity_zone_detail2.xml" value="0.264" />
+        <entry key="..\:/Users/jel/Desktop/BEUTH/Bloom/Code/Frontend/app/src/main/res/layout/api_list.xml" value="0.128125" />
+        <entry key="..\:/Users/jel/Desktop/BEUTH/Bloom/Code/Frontend/app/src/main/res/layout/autowater_card.xml" value="0.264" />
+        <entry key="..\:/Users/jel/Desktop/BEUTH/Bloom/Code/Frontend/app/src/main/res/layout/button.xml" value="0.2" />
+        <entry key="..\:/Users/jel/Desktop/BEUTH/Bloom/Code/Frontend/app/src/main/res/layout/dash_dry_zones_item.xml" value="0.176" />
+        <entry key="..\:/Users/jel/Desktop/BEUTH/Bloom/Code/Frontend/app/src/main/res/layout/dash_warn_watertank.xml" value="0.4" />
+        <entry key="..\:/Users/jel/Desktop/BEUTH/Bloom/Code/Frontend/app/src/main/res/layout/dash_warn_zones.xml" value="0.4" />
+        <entry key="..\:/Users/jel/Desktop/BEUTH/Bloom/Code/Frontend/app/src/main/res/layout/dash_zone_list_item.xml" value="0.2074966532797858" />
+        <entry key="..\:/Users/jel/Desktop/BEUTH/Bloom/Code/Frontend/app/src/main/res/layout/fragment_addzone.xml" value="0.36904761904761907" />
+        <entry key="..\:/Users/jel/Desktop/BEUTH/Bloom/Code/Frontend/app/src/main/res/layout/fragment_addzone_next.xml" value="0.264" />
+        <entry key="..\:/Users/jel/Desktop/BEUTH/Bloom/Code/Frontend/app/src/main/res/layout/fragment_addzone_success.xml" value="0.2" />
+        <entry key="..\:/Users/jel/Desktop/BEUTH/Bloom/Code/Frontend/app/src/main/res/layout/fragment_edit_name.xml" value="0.17135416666666667" />
+        <entry key="..\:/Users/jel/Desktop/BEUTH/Bloom/Code/Frontend/app/src/main/res/layout/fragment_hub_reg_info.xml" value="0.128" />
+        <entry key="..\:/Users/jel/Desktop/BEUTH/Bloom/Code/Frontend/app/src/main/res/layout/fragment_hubreg.xml" value="0.136" />
+        <entry key="..\:/Users/jel/Desktop/BEUTH/Bloom/Code/Frontend/app/src/main/res/layout/fragment_login.xml" value="0.376599634369287" />
+        <entry key="..\:/Users/jel/Desktop/BEUTH/Bloom/Code/Frontend/app/src/main/res/layout/fragment_register.xml" value="0.1" />
+        <entry key="..\:/Users/jel/Desktop/BEUTH/Bloom/Code/Frontend/app/src/main/res/layout/fragment_sign.xml" value="0.264" />
+        <entry key="..\:/Users/jel/Desktop/BEUTH/Bloom/Code/Frontend/app/src/main/res/layout/fragment_welcome.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/jel/Desktop/BEUTH/Bloom/Code/Frontend/app/src/main/res/layout/fragment_zone.xml" value="0.152" />
+        <entry key="..\:/Users/jel/Desktop/BEUTH/Bloom/Code/Frontend/app/src/main/res/layout/fragment_zone_delete.xml" value="0.1171875" />
+        <entry key="..\:/Users/jel/Desktop/BEUTH/Bloom/Code/Frontend/app/src/main/res/layout/hub_list_item.xml" value="0.4" />
+        <entry key="..\:/Users/jel/Desktop/BEUTH/Bloom/Code/Frontend/app/src/main/res/layout/login_entry.xml" value="0.264" />
+        <entry key="..\:/Users/jel/Desktop/BEUTH/Bloom/Code/Frontend/app/src/main/res/layout/login_form.xml" value="0.2" />
+        <entry key="..\:/Users/jel/Desktop/BEUTH/Bloom/Code/Frontend/app/src/main/res/layout/results_list.xml" value="0.128125" />
+        <entry key="..\:/Users/jel/Desktop/BEUTH/Bloom/Code/Frontend/app/src/main/res/layout/signup_entry.xml" value="0.1695501730103806" />
+        <entry key="..\:/Users/jel/Desktop/BEUTH/Bloom/Code/Frontend/app/src/main/res/layout/signup_form.xml" value="0.264" />
+        <entry key="..\:/Users/jel/Desktop/BEUTH/Bloom/Code/Frontend/app/src/main/res/layout/throbber.xml" value="0.22644927536231885" />
+        <entry key="..\:/Users/jel/Desktop/BEUTH/Bloom/Code/Frontend/app/src/main/res/layout/toolbar.xml" value="0.536" />
+        <entry key="..\:/Users/jel/Desktop/BEUTH/Bloom/Code/Frontend/app/src/main/res/layout/zone_detail.xml" value="0.176" />
+        <entry key="..\:/Users/jel/Desktop/BEUTH/Bloom/Code/Frontend/app/src/main/res/layout/zone_list_item.xml" value="0.38832252085264135" />
+        <entry key="..\:/Users/jel/Desktop/BEUTH/Bloom/Code/Frontend/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1005" />
+        <entry key="..\:/Users/jel/Desktop/BEUTH/Bloom/Code/Frontend/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.1005" />
+        <entry key="..\:/Users/jel/Desktop/BEUTH/Bloom/Code/Frontend/app/src/main/res/xml/network_security_config.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_button.xml" value="0.1503623188405797" />
+        <entry key="app/src/main/res/layout/activity_home.xml" value="0.20483932474405725" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.13728470111448834" />
+        <entry key="app/src/main/res/layout/activity_zone.xml" value="0.1503623188405797" />
+        <entry key="app/src/main/res/layout/activity_zone_detail.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/api_list.xml" value="0.13728470111448834" />
+        <entry key="app/src/main/res/layout/button.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/fragment_edit_name.xml" value="0.23162393162393163" />
+        <entry key="app/src/main/res/layout/fragment_login.xml" value="0.1123931623931624" />
+        <entry key="app/src/main/res/layout/fragment_zone.xml" value="1.7842750192507628" />
+        <entry key="app/src/main/res/layout/toolbar.xml" value="0.19737430977582865" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

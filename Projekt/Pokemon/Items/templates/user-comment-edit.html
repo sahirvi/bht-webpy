@@ -1,0 +1,31 @@
+{% extends 'home.html' %}
+{% load static %}
+{% load crispy_forms_filters %}
+
+{% block title %}Comment Edit and Delete{% endblock %}
+
+{% block logged_in_content %}
+    <div class="bg-image" style="background-image: url('https://i.imgur.com/YcVQBDc.png');
+      height: 100vh;">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-4">
+                    <h2>Edit or Delete your Comment !</h2>
+
+                    <b style="color: darkgreen">{{ comment.myuser.username }} on {{ comment.timestamp }}</b><br>
+                    {% if user.id == comment.myuser.id %}
+                        <form method="POST">
+                            {% csrf_token %}
+                            {{ form|crispy }}
+                            <input type="hidden" id="comment_id" name="comment_id" value="{{ comment.id }}">
+                            <button type="submit" class="btn btn-primary" name="edit">Edit</button>
+                            <button type="submit" class="btn btn-danger" name="delete">Delete</button>
+                        </form>
+                    {% else %}
+                        {{ comment.text }}<br>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

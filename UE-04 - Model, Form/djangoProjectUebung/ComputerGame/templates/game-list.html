@@ -1,0 +1,20 @@
+{% extends 'home.html' %}
+{% load static %}
+
+{% block title %}Games List{% endblock %}
+
+{% block content %}
+<h2>Games List</h2>
+<ul>
+    {% for game in all_the_games %}
+        <a href="{{ game.id }}/"><b>{{ game.name }}</b></a><br>
+        <!-- Alternative link:
+        <a href="{% url 'game-detail' game.id %}">
+        -->
+       {{ game.creator }} / {{ game.get_genre_display }} / USK: {{ game.USK }}<br>
+
+    {% endfor %}
+</ul>
+
+<a href={% url 'game-create' %}>add a new game</a><br>
+{% endblock %}

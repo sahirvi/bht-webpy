@@ -1,0 +1,33 @@
+{% extends 'home.html' %}
+{% load static %}
+
+{% block title %}Delete Item{% endblock %}
+{% block logged_in_content %}
+    <div class="bg-image" style="background-image: url('https://i.imgur.com/YcVQBDc.png');
+      height: 100vh;">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-4">
+                    <h2>Delete the Item</h2>
+
+
+                    {% if not can_edit %}
+                        You are not authorized to delete Item's.<br><br>
+                    {% endif %}
+                    {% if can_edit %}
+                        <form method="post">{% csrf_token %}
+                            <p>Are you sure you want to delete "{{ that_one_item.name }}"?</p>
+                            <input type="submit" class="btn btn-danger" value="Delete">
+                        </form>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block not_logged_in_content %}
+    <p>You must log in to delete Items</p>
+    <a href="{% url 'login' %}">Login</a>
+{% endblock %}

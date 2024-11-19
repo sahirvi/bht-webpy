@@ -1,0 +1,108 @@
+### LOGIN AN HUB, GET TOKEN BACK AND CREATE USER_KEY IN HUB
+# @name hubRegistration
+POST https://localhost:443/hubRegistration/postHubRegistration
+Authorization: Basic MToxMjM0NTQzMjM1MzQ5NzU4NDMy
+
+@bloomHubToken = {{hubRegistration.response.headers.Authorization}}
+
+### ADD A NEW SENSOR
+POST https://localhost:443/sensor/addSensor
+Authorization: {{bloomHubToken}}
+Content-Type: application/json
+
+{
+    "hub_id": 1,
+    "zone_id": 1,
+    "battery": 1,
+    "moisture_value": 1
+}
+
+### LOGIN WITH BASIC AUTHENTICATION
+# @name loginUser
+POST https://localhost:443/user/login
+Authorization: Basic Ymxvb21AbWFpbC5kZToxMjM=
+
+@bloomToken = {{loginUser.response.headers.Authorization}}
+
+### GET ALL SENSORS
+GET https://localhost:443/sensor/getAllSensors
+Authorization: {{bloomToken}}
+Content-Type: application/json
+
+### GET ALL SENSORS BY HUB ID
+GET https://localhost:443/sensor/getAllSensorsByHubId/1
+Authorization: {{bloomToken}}
+
+### GET SENSOR BY HUB ID AND ZONE ID
+GET https://localhost:443/sensor/getSensor?hub_id=1&zone_id=1
+Authorization: {{bloomToken}}
+
+### UPDATES SENSOR (MOISTURE VALUE) WITH HUB ID AND ZONE ID 
+PUT https://localhost:443/sensor/updateSensor?hub_id=1&zone_id=1
+Authorization: {{bloomToken}}
+Content-Type: application/json
+
+{
+    "moisture_value": 0.1
+}
+
+### DELETE ZONE WITH ZONE ID
+DELETE https://localhost:443/sensor/deleteSensor?hub_id=1&zone_id=1
+Authorization: {{bloomToken}}
+
+
+// ---------- Tests mit Server-Adresse ----------
+
+
+### LOGIN AN HUB, GET TOKEN BACK AND CREATE USER_KEY IN HUB
+# @name hubRegistration
+POST https://217.160.45.110:443/hubRegistration/postHubRegistration
+Authorization: Basic MjoxMjM0NTQzMjM1MzQ5NzU4NDMy
+
+@bloomHubToken = {{hubRegistration.response.headers.Authorization}}
+
+### ADD A NEW SENSOR AND MEASUREMENT
+POST https://217.160.45.110:443/sensor/addSensor
+Authorization: {{bloomToken}}
+Content-Type: application/json
+
+{
+    "hub_id": 1,
+    "zone_id": 1,
+    "battery": 1,
+    "moisture_value": 1
+}
+
+### LOGIN WITH BASIC AUTHENTICATION
+# @name loginUser
+POST https://217.160.45.110:443/user/login
+Authorization: Basic Ymxvb21AbWFpbC5kZTpibG9vbTEyMyEh
+
+@bloomToken = {{loginUser.response.headers.Authorization}}
+
+
+### GET ALL SENSORS
+GET https://217.160.45.110:443/sensor/getAllSensors
+Authorization: {{bloomToken}}
+Content-Type: application/json
+
+### GET ALL SENSORS BY HUB ID
+GET https://217.160.45.110:443/sensor/getAllSensorsByHubId/1
+Authorization: {{bloomToken}}
+
+### GET SENSOR BY HUB ID AND ZONE ID
+GET https://217.160.45.110:443/sensor/getSensor?hub_id=1&zone_id=1
+Authorization: {{bloomToken}}
+
+### UPDATES SENSOR (MOISTURE VALUE) WITH HUB ID AND ZONE ID 
+PUT https://217.160.45.110:443/sensor/updateSensor?hub_id=1&zone_id=1
+Authorization: {{bloomToken}}
+Content-Type: application/json
+
+{
+    "moisture_value": 0.1
+}
+
+### DELETE HUB WITH ZONE ID
+DELETE https://217.160.45.110:443/sensor/deleteSensor?hub_id=1&zone_id=1
+Authorization: {{bloomToken}}

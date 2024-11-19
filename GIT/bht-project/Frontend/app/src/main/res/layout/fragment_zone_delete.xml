@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".views.ZoneDetailActivity">
+
+    <!--Background Card-->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardViewDelete"
+        android:layout_width="match_parent"
+        android:layout_height="592dp"
+        app:cardBackgroundColor="@color/light_green"
+        app:cardElevation="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!--Zone Name-->
+            <TextView
+                android:id="@+id/zoneName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="40dp"
+                android:fontFamily="@font/outfit_extrabold"
+                android:text="@string/zone_name"
+                android:textColor="@color/black"
+                android:textSize="@dimen/header"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <!--Delete Zone Warning-->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/deleteZoneWarning"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginRight="16dp"
+                app:cardBackgroundColor="@color/creme"
+                app:cardCornerRadius="15dp"
+                app:cardElevation="0dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/zoneName">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:contentDescription="@string/warningSymbol"
+                    android:src="@drawable/warning_icon" />
+
+                <TextView
+                    android:id="@+id/deleteZoneTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="64dp"
+                    android:layout_marginTop="24dp"
+                    android:fontFamily="@font/outfit_bold"
+                    android:text="@string/zonedelete_warning_title_example"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/btn_font"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/deleteZoneText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="64dp"
+                    android:layout_marginTop="56dp"
+                    android:layout_marginEnd="40dp"
+                    android:layout_marginBottom="24dp"
+                    android:fontFamily="@font/outfit_regular"
+                    android:text="@string/zonedelete_warning_text"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/btn_font" />
+            </androidx.cardview.widget.CardView>
+
+            <!--Delete Button-->
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/deleteButton"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="32dp"
+                android:background="@drawable/rounded_corner"
+                android:clickable="true"
+                android:fontFamily="@font/outfit_bold"
+                android:text="@string/zone_delete_btn"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/btn_font"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/deleteZoneWarning" />
+
+            <ImageView
+                android:id="@+id/deleteFooter"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:contentDescription="@string/footer"
+                android:scaleType="fitXY"
+                android:src="@drawable/visual_footer_detail_manual"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <!--Cancel Delete Zone-->
+            <TextView
+                android:id="@+id/cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="32dp"
+                android:clickable="true"
+                android:fontFamily="@font/outfit_bold"
+                android:text="@string/zone_delete_cancel"
+                android:textColor="@color/white"
+                android:textSize="@dimen/btn_font"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

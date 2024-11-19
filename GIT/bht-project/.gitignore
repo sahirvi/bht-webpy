@@ -1,0 +1,17 @@
+# GENERAL
+.DS_Store
+.vscode
+
+# BACKEND
+Code/Backend/node_modules
+
+# HUB
+Code/Hub/mpy
+Code/Hub/esp
+Code/Hub/ref
+
+# SENSOR
+**/libraries/RadioHead
+
+# DOKUMENTATION
+Dokumentation/02_Protokolle/04_Videos/220209_Praesentationsvideo

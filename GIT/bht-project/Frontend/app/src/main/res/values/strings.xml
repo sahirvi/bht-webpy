@@ -1,0 +1,197 @@
+<resources>
+    <!-- Toolbar -->
+    <string name="app_name">bloom</string>
+    <string name="app_name_desc">Logo</string>
+
+    <!-- OnBoarding -->
+    <string name="onboarding1">Mit Bloom m&#252;ssen\n deine Pflanzen\nnie mehr Durst haben!</string>
+    <string name="onboarding2">Sensoren messen die\n Bodenfeuchtigkeit in\n verschiedenenen Gie&#223;zonen</string>
+    <string name="onboarding3">Bloom kann automatisch\n gie&#223;en oder warnen,\n wenn es zu trocken ist</string>
+    <string name="onboardingButton">Weiter</string>
+
+    <!-- Welcome -->
+    <string name="welcome_text">Hi Bloomer</string>
+    <string name="welcome_button">Zum Login</string>
+    <string name="welcome_signup_text">Du bist noch kein Bloomer?</string>
+    <string name="welcome_signup_link">Zur Registrierung</string>
+
+    <!-- Sign Up -->
+    <string name="reg_title">Registrierung</string>
+    <string name="reg_mail">Email</string>
+    <string name="reg_PW">Passwort</string>
+    <string name="reg_PW_repeat">Passwort wiederholen</string>
+    <string name="error_signup_1">Dein Passwort muss aus mindestens 8 Zeichen und einem Sonderzeichen bestehen</string>
+    <string name="error_signup_2">Die beiden Passwörter stimmen nicht überein</string>
+    <string name="reg_button">Registrieren</string>
+    <string name="reg_bloomer">Du bist schon ein Bloomer?</string>
+    <string name="reg_login">Zum Login</string>
+
+    <!-- Key Entry -->
+    <string name="entry_welcome_title">Hi Bloomer!</string>
+    <string name="entry_welcome_text">Hast du dein Bloom Kit schon\nausgepackt und aufgebaut?</string>
+    <string name="entry_welcome_button">Ja</string>
+    <string name="entry_welcome_help"><u>Wie baue ich mein Bloom Kit auf?</u></string>
+
+    <string name="entry_btn_send">Abschicken</string>
+    <string name="entry_text">Jede*r Bloomer\nhat eine Bloom Box</string>
+    <string name="entry_display">Code vom Display deiner BloomBox</string>
+    <string name="entry_help_text"><u>Hilfe, ich sehe keinen Code!</u></string>
+    <string name="entry_wrong_code">Dieser Code ist leider falsch</string>
+
+    <!-- Login -->
+    <string name="login_title">Login</string>
+    <string name="login_email">Email</string>
+    <string name="login_pw">Passwort</string>
+    <string name="login_btn">Einloggen</string>
+    <string name="login_forgot_pw">Passwort vergessen?</string>
+    <string name="login_no_bloomer">Du bist noch kein Bloomer?</string>
+    <string name="login_reg">Zur Registrierung</string>
+    <string name="login_error">E-Mail oder Passwort sind leider falsch</string>
+
+    <!-- Dahsboard -->
+    <string name="dash_title">Hi, Bloomer</string>
+    <string name="dash_auto_water_title">Automatische Bew&#228;sserung</string>
+    <string name="dash_auto_water_text">Bloom gie&#223;t alle deine Pflanzen automatisch f&#252;r dich</string>
+    <string name="dash_zone_title">Deine Gie&#223;zonen</string>
+    <string name="dash_warn_bucket_title">Wassertank leer</string>
+    <string name="dash_warn_bucket_text">Bitte f&#252;lle Gie&#223;wasser nach</string>
+    <string name="dash_manual_watering_title">Manuelle Bew&#228;sserung</string>
+    <string name="dash_manual_watering_text">Bloom warnt dich, wenn deine Pflanzen zu trocken sind und du entscheidest, wann du sie gie&#223;t</string>
+    <string name="dash_warning_to_dry_title">Erde zu trocken</string>
+    <string name="dash_warning_to_dry_text">Bitte gie&#223; Zone</string>
+
+    <!-- Create Zone -->
+    <string name="create_title">Gie&#223;zone hinzuf&#252;gen</string>
+    <string name="create_warning_title">Achtung</string>
+    <string name="create_warning_text">Schlie&#223;e zuerst den Schlauch an. Befolge dazu die 3 Schritte unten. Sobald du auf Weiter klickst, kann Wasser aus Ventil Nummer 3 an deiner BloomBox kommen!</string>
+    <string name="create_container1_title">Schlauch anschlie&#223;en</string>
+    <string name="create_container1_text">Stecke einen Schlauch an Ventil Nummer 3 an deiner BloomBox</string>
+    <string name="create_container2_title">Schlauch verlegen</string>
+    <string name="create_container2_text">Lege den Schlauch in den Pflanz-kasten, der gegossen werden soll</string>
+    <string name="create_container3_title">L&#246;cher bohren</string>
+    <string name="create_container3_text">Versehe den Schlauch (dort wo er auf der Erde liegt) alle 1 bis 2 cm mit einer &#214;ffnung</string>
+    <string name="create_button_next">Weiter</string>
+    <string name="create_button_cancel">Abbrechen</string>
+    <string name="create_finish">Fertigstellen</string>
+
+    <!-- Added/Deleted Zones -->
+    <string name="added_title">Hi, Bloomer</string>
+    <string name="added_container_title">Automatische Bew&#228;sserung</string>
+    <string name="added_container_text">Bloom gie&#223;t alle deine Pflanzen automatisch f&#252;r dich</string>
+    <string name="added_zones_title">Deine Gie&#223;zonen</string>
+
+    <!-- Zone Detail -->
+    <string name="zone_id">1</string>
+    <string name="zone_name">Kr&#228;uter</string>
+    <string name="zone_moisture_title">Feuchtigkeit</string>
+    <string name="zone_moisture_text">Noch nie gemessen</string>
+    <string name="moisture_value_percentage">10%</string>
+    <string name="zone_auto_title">Automatisches Gie&#223;en</string>
+    <string name="zone_watering_text">Bloom gie&#223;t hier gerade</string>
+    <string name="zone_manual_title">Manuelles Gie&#223;en</string>
+    <string name="zone_last_watered">Noch nie gegossen</string>
+    <string name="timer_time">09:41</string>
+    <string name="zone_stop_btn">Gie&#223;en \nstoppen</string>
+    <string name="zone_btn">Gie&#223;en</string>
+    <string name="zone_delete">Gie&#223;zone l&#246;schen</string>
+    <string name="zone_warning_to_dry">Erde zu trocken, bitte gie&#223;en</string>
+    <string name="zone_warning_bat_low">Sensor aufladen</string>
+    <string name="last_watered_now">Gerade gegossen</string>
+    <string name="last_watered_minute">Gegossen vor %1$d Minute%2$s</string>
+    <string name="last_watered_hour">Gegossen vor %1$d Stunde%2$s</string>
+    <string name="last_measured_now">Gerade gemessen</string>
+    <string name="last_measured_minute">Gemessen vor %1$d Minute%2$s</string>
+    <string name="last_measured_hour">Gemessen vor %1$d Stunde%2$s</string>
+
+    <string name="edit_name_input">Name der Gie&#223;zone</string>
+    <string name="edit_name_error">Der Name darf höchstens 12 Zeichen lang sein</string>
+    <string name="edit_name_button">Speichern</string>
+
+    <string name="zonedelete_warning_title">Gie&#223;zone %1$d l&#246;schen?</string>
+    <string name="zonedelete_warning_title_example">Gie&#223;zone 1 l&#246;schen?</string>
+    <string name="zonedelete_warning_text">Bloom wird hier weder gießen\nnoch die Feuchtigkeit messen\n\nDer Sensor wird sich in sp&#228;testens einer Stunde selbst deaktivieren</string>
+    <string name="zone_delete_btn">Gie&#223;zone l&#246;schen</string>
+    <string name="zone_delete_cancel">Abbrechen</string>
+
+
+    <!--Content-Description:-->
+    <string name="plantImage">Plant Image</string>
+    <string name="warningSymbol">Warning Symbol</string>
+    <string name="editIcon">Edit Icon</string>
+    <string name="batteryIcon">Battery Icon</string>
+    <string name="batteryAlert">Battery Alert</string>
+    <string name="BG">Background</string>
+    <string name="dots">three dots</string>
+    <string name="backButton">Back Button</string>
+    <string name="closeButton">Close Button</string>
+    <string name="bloomBox">Bloom Box</string>
+    <string name="mvCircle">Moisture Value Circle</string>
+    <string name="timerCircle">Timer Circle</string>
+    <string name="footer">Footer for delete</string>
+
+    <!--Create Zone-->
+    <string name="zone_create_title">Jede Zone hat einen Sensor und einen Schlauch an deiner Bloom Box</string>
+    <string name="zone_create_warn_title">Erst Schlauch an Ventil 3 stecken</string>
+    <string name="zone_create_warn_text">Sobald ein Sensor verbunden ist, kann Wasser aus Ventil 3 fließen</string>
+    <string name="zone_create_help_link"><u>Wie schließe ich den Schlauch an?</u></string>
+    <string name="sensor_pre_create_help_link"><u>Hilfe, es funktioniert nicht!</u></string>
+    <string name="sensor_pre_connect_title">Wo ist mein Sensor?</string>
+    <string name="sensor_pre_connect_text">Halte Sensor 3 nah an deine Bloom Box und schalte ihn ein</string>
+    <string name="sensor_pre_connect_warn_text">Noch kein Sensor verbunden...</string>
+    <string name="sensor_create_success_link"><u>Ich will mehr Infos zum Sensor</u></string>
+    <string name="sensor_create_help_link"><u>Hilfe, es funktioniert nicht!</u></string>
+    <string name="sensor_created_text">Stecke ihn jetzt dort in die Erde, wo du auch den Schlauch verlegt hast</string>
+    <string name="zone_created_button">Fertigstellen</string>
+
+    <!--OLD:-->
+
+    <!--Humidity-->
+    <string name="humidity">No new humidity data</string>
+    <string name="dry">Zone is dry</string>
+    <!--Weather-->
+    <string name="city">City</string>
+    <string name="temperature">0°</string>
+    <!--HubList-->
+    <string name="hubid">Hub  </string>
+    <string name="outletcount">Outlet count </string>
+    <string name="hubsempty">No hubs</string>
+    <!--ZoneList-->
+    <string name="zoneid">Zone  </string>
+    <string name="zonehubid">Hub  </string>
+    <string name="isdry">Is dry </string>
+    <!--Login Or Sign-Up-->
+    <string name="sign_up">Not a member yet?</string>
+    <string name="home">Home</string>
+    <string name="hey">Welcome to Bloom</string>
+    <string name="introduction">We can </string>
+    <string name="success">Success</string>
+    <string name="descr">Take care for your plants from anywhere around the world! Sign-up
+    to start your Bloom journey. </string>
+    <string name="get_started">Get Started</string>
+    <!--Sign-Up-->
+    <string name="repeat_password">Repeat Password</string>
+    <string name="account_exsists">Already have an account? Login</string>
+    <string name="signup_format">Wrong format</string>
+    <string name="signup_exists">E-Mail already exists</string>
+    <string name="signup_fail">Sign-Up Failed</string>
+    <string name="create_account">Create an account</string>
+    <!--Login Form-->
+    <string name="email">E-Mail</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="signup">Sign-Up</string>
+    <string name="pw_hyperlink">Forgot password? Click here</string>
+    <string name="get">Get</string>
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="login_fail">Login Failed</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

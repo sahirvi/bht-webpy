@@ -1,0 +1,48 @@
+{% extends 'home.html' %}
+{% load static %}
+
+{% block title %}Pokédex{% endblock %}
+
+{% block content %}
+
+    <div class="bg-image" style="background-image: url('https://i.imgur.com/eGPvZpS.jpeg');">
+
+        <h1>Pokédex</h1>
+        <div class="d-flex">
+
+            <div class="row justify-content-left">
+                <ul>
+                    {% for pokemon in all_the_pokemon %}
+                        <a href="{{ pokemon.id }}/"><b>{{ pokemon.name }}</b></a><br>
+
+                        {{ pokemon.number }} | {{ pokemon.get_type_display }}<br>
+                        <a href="{% url 'pokemon-pdf' pokemon.id %}">
+                            <button class="btn btn-primary">PDF</button>
+                        </a>
+                        <hr>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+
+
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-6">
+                    <h1>Explore!</h1>
+                    {% if user.can_edit %}
+                        <a href="{% url 'pokemon-create' %}" class="btn btn-primary stretched link">Add a new
+                            Pokémon</a><br>
+                        <br>
+                    {% endif %}
+                    <a href="{% url 'pokemon-search' %}" class="btn btn-primary stretched link ">Search a
+                        Pokémon</a><br><br>
+
+                    <a href="{% url 'home' %}" class="btn btn-primary stretched link">Back to Home</a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+

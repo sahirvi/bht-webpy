@@ -1,0 +1,21 @@
+Ausgabe für kreis_mathe.py:
+
+/Users/sahi/PycharmProjects/pythonProject/venv/bin/python /Users/sahi/PycharmProjects/pythonProject/kreis_mathe.py
+Radius:  3
+Flächeninhalt:  28.274333882308138
+Radius:  3
+Umfang:  18.84955592153876
+
+Process finished with exit code 0
+
+
+Ausgabe für Student.py:
+
+/Users/sahi/PycharmProjects/pythonProject/venv/bin/python /Users/sahi/PycharmProjects/pythonProject/Student.py
+Name des Studenten: Sahiram Ravikumar, Matrikelnummer: 899517 und Geburtsdatum: 24.11.1997
+Student('Sahiram', 'Ravikumar', 899517, '24.11.1997')
+{'Programmierung I': 2.7, 'Programmierung II': 1.7, 'Mathematik I': 2.0, 'Mathematik II': 2.3, 'Software Engineering I': 1.0}
+Anzahl der geänderten Noten:  4
+{'Programmierung I': 1.0, 'Programmierung II': 1.0, 'Mathematik I': 1.0, 'Mathematik II': 1.0, 'Software Engineering I': 1.0}
+
+Process finished with exit code 0

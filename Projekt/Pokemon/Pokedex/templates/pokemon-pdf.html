@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ that_one_pokemon.name }}</title>
+</head>
+<body>
+<table>
+    <tr>
+        <td>
+            <img src="{{ that_one_pokemon.product_picture.path }}" height="300" width="300" alt="Produktbild"><br>
+        </td>
+    </tr>
+    <tr>
+        <td><b>Name:</b></td>
+        <td>{{ that_one_pokemon.name }}<br></td>
+    </tr>
+    <tr>
+        <td><b>Type:</b></td>
+        <td>{{ that_one_pokemon.get_type_display }}<br></td>
+    </tr>
+    <tr>
+        <td><b>Number:</b></td>
+        <td>{{ that_one_pokemon.number }}<br></td>
+    </tr>
+    <tr>
+        <td><b>Hit Points:</b></td>
+        <td>{{ that_one_pokemon.hp }}<br></td>
+    </tr>
+    <tr>
+        <td><b>Attack Points:</b></td>
+        <td>{{ that_one_pokemon.ap }}<br></td>
+    </tr>
+    <tr>
+        <td><b>Defense:</b></td>
+        <td>{{ that_one_pokemon.defense }}<br></td>
+    </tr>
+    <tr>
+        <td><b>Entered by:</b></td>
+        <td>{{ that_one_pokemon.myuser.username }}<br></td>
+    </tr>
+    <tr>
+        <td><b>Price:</b></td>
+        <td>{{ that_one_pokemon.price }} €<br></td>
+    </tr>
+</table>
+</body>
+</html>

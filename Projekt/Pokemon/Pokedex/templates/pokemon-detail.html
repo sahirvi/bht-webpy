@@ -1,0 +1,92 @@
+{% extends 'home.html' %}
+{% load static %}
+
+{% block title %}{{ that_one_pokemon.name }}{% endblock %}
+
+{% block content %}
+    <div class="bg-image" style="background-image: url(https://img.wallpapersafari.com/desktop/1920/1080/77/68/GFIKPr.jpg);
+      height: 100vh;">
+    <div class="container">
+    <div class="row justify-content-center text-white">
+        <div class="col-4">
+            <h2>Pokémon Detail</h2>
+
+            <br>
+            <h3>Name: {{ that_one_pokemon.name }} </h3>
+
+
+            <img src="{{ that_one_pokemon.product_picture.url }}" height="150" width="150" alt="Produktbild"><br>
+            <br>
+        </div>
+    </div>
+
+
+    <div class="border border-danger text-white">
+        <div class="d-flex justify-content-between flex-row ">
+            <div class="p2">
+                <h4>Type: {{ that_one_pokemon.get_type_display }}</h4>
+            </div>
+
+            <div class="p2">
+                <h4>Number: {{ that_one_pokemon.number }}</h4>
+            </div>
+
+            <div class="p2">
+                <h4>Hit Points: {{ that_one_pokemon.hp }}</h4>
+            </div>
+
+            <div class="p2">
+                <h4>Attack Points: {{ that_one_pokemon.ap }}</h4>
+
+            </div>
+            <div class="p2">
+                <h4>Defense: {{ that_one_pokemon.defense }}</h4>
+            </div>
+
+            <div class="p2">
+                <h4>Entered by: {{ that_one_pokemon.myuser.username }}</h4>
+            </div>
+
+            <div class="p2">
+                <h4>Price: ¥{{ that_one_pokemon.price }}</h4>
+            </div>
+
+            <div class="p2">
+                <h4><a href="{{ that_one_pokemon.some_file.url }}">PDF-file</a></h4>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-4">
+                {% if user.is_authenticated %}
+                    <br>
+                    <form method="POST">
+                        {% csrf_token %}
+                        <button type="submit" class="btn btn-success">Add to shopping cart</button>
+                    </form>
+                {% else %}
+                    <br><a href="{% url 'login' %}">Login</a> to add to shopping cart
+                    <br>
+                {% endif %}
+
+                <br><br>
+
+                <a href="{% url 'pokemon-list' %}" class="btn btn-primary">Back to all Pokémon's</a>
+
+                <br>
+                {% if user.can_edit %}
+                    <form action="{% url 'pokemon-delete' that_one_pokemon.id %}">
+                        <br>
+                        <input type="submit" class="btn btn-danger" value="Delete that Pokémon"/>
+                    </form>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}
+</div>
+</div>
+</div>

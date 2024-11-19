@@ -1,0 +1,82 @@
+{% extends 'home.html' %}
+{% load static %}
+{% load crispy_forms_filters %}
+
+{% block title %}Add a Pokémon{% endblock %}
+
+{% block logged_in_content %}
+    <div class="bg-image" style="background-image: url('https://i.imgur.com/YcVQBDc.png');">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-4">
+                    <h2>Add a Pokémon</h2>
+                    {% if not can_edit %}
+                        You are not authorized to add Pokémon's.<br><br>
+                    {% endif %}
+                    {% if can_edit %}
+                        <div class="form-group">
+                        <form method="Post" enctype="multipart/form-data">
+                            {% csrf_token %}
+
+                            <label for="{{ form.name.id_for_label }}">{{ form.name.label }}:</label>
+                            <input id="{{ form.name.id_for_label }}" class="form-control"
+                                   type="{{ form.name.field.widget.input_type }}"
+                                   name="{{ form.name.html_name }}"><br><br>
+
+                            {{ form.product_picture.label }}:
+                            {{ form.product_picture }}<br><br>
+
+
+                            <div class="form-group">
+                                <label for="id_type">Type:</label>
+                                <select id="id_type" multiple class="form-control" type="text" name="type">
+                                    <option value="f">fire</option>
+                                    <option value="w">water</option>
+                                    <option value="g">ground</option>
+                                    <option value="a">air</option>
+                                    <option value="gr">grass</option>
+                                    <option value="gh">ghost</option>
+                                </select>
+                                <br><br>
+                            </div>
+                            {{ form.number.label }}:
+                            {{ form.number }}<br><br>
+
+                            <label for="{{ form.hp.id_for_label }}">{{ form.hp.label }}:</label>
+                            <input id="{{ form.hp.id_for_label }}" type="{{ form.hp.field.widget.input_type }}"
+                                   name="{{ form.hp.html_name }}"><br><br>
+
+                            <label for="{{ form.ap.id_for_label }}">{{ form.ap.label }}:</label>
+                            <input id="{{ form.ap.id_for_label }}" type="{{ form.ap.field.widget.input_type }}"
+                                   name="{{ form.ap.html_name }}"><br><br>
+
+                            <label for="{{ form.defense.id_for_label }}">{{ form.defense.label }}:</label>
+                            <input id="{{ form.defense.id_for_label }}"
+                                   type="{{ form.defense.field.widget.input_type }}"
+                                   name="{{ form.defense.html_name }}"><br><br>
+
+                            <label for="{{ form.price.id_for_label }}">{{ form.price.label }}:</label>
+                            <input id="{{ form.price.id_for_label }}" type="{{ form.price.field.widget.input_type }}"
+                                   name="{{ form.price.html_name }}"><br><br>
+
+                            {{ form.some_file.label }}:
+                            {{ form.some_file }}<br><br>
+
+                            <button type="submit" class="btn btn-success">Add Pokémon</button>
+                            <br><br>
+
+                            <a href="{% url 'pokemon-list' %}" class="btn btn-danger">Back to all Pokémon's</a>
+                        </form>
+                    {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+
+{% block not_logged_in_content %}
+    <p>You must log in to add Pokémon's</p>
+    <a href="{% url 'login' %}">Login</a>
+{% endblock %}

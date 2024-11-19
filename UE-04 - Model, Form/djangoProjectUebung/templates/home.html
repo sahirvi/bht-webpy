@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}GAMES{% endblock %}
+
+{% block content %}
+    {% if user.is_authenticated %}
+        {% block logged_in_content %}
+            <p>Salam aleikum {{ user.username }}!</p>
+            <p><a href="{% url 'game-list' %}">show me some games</a></p>
+            <a href="{% url 'logout' %}">Logout</a>
+        {% endblock %}
+    {% else %}
+        {% block not_logged_in_content %}
+            <p>You are not logged in</p>
+            <a href="{% url 'login' %}">Login</a>
+        {% endblock %}
+    {% endif %}
+{% endblock %}

@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/zoneDetailLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/creme"
+    android:orientation="vertical"
+    android:weightSum="4"
+    tools:context=".views.ZoneDetailActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--Plant Background Image-->
+        <ImageView
+            android:id="@+id/backgroundImage"
+            android:layout_width="wrap_content"
+            android:layout_height="232dp"
+            android:contentDescription="@string/plantImage"
+            android:src="@drawable/visual_zone_1"
+            app:layout_constraintBottom_toTopOf="@+id/isDryCard"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/backButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="40dp"
+            android:contentDescription="@string/backButton"
+            android:src="@drawable/ic_baseline_arrow_back_ios_24"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!--Background Card-->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView"
+            android:layout_width="match_parent"
+            android:layout_height="560dp"
+            app:cardBackgroundColor="@color/light_green"
+            app:cardElevation="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <!--Zone Name-->
+                <TextView
+                    android:id="@+id/zoneName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="32dp"
+                    android:fontFamily="@font/outfit_extrabold"
+                    android:text="@string/zone_name"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/header"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <!--Edit Icon-->
+                <ImageView
+                    android:id="@+id/editIcon"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="19dp"
+                    android:clickable="true"
+                    android:contentDescription="@string/editIcon"
+                    android:src="@drawable/edit_icon"
+                    app:layout_constraintStart_toEndOf="@+id/zoneName"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <!--Battery Icon-->
+                <ImageView
+                    android:id="@+id/batteryIcon"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="16dp"
+                    android:contentDescription="@string/batteryIcon"
+                    android:src="@drawable/battery"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <!--Battery Icon Alert-->
+                <ImageView
+                    android:id="@+id/batteryIconAlert"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="16dp"
+                    android:contentDescription="@string/batteryAlert"
+                    android:src="@drawable/battery_alert"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/batteryAlertText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="48dp"
+                    android:layout_marginEnd="-16dp"
+                    android:text="@string/zone_warning_bat_low"
+                    android:textColor="@color/red"
+                    android:textSize="@dimen/moisture_text"
+                    app:layout_constraintEnd_toStartOf="@id/batteryIconAlert"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <!--Moisture Value-->
+                <TextView
+                    android:id="@+id/moistureValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="40dp"
+                    android:fontFamily="@font/outfit_bold"
+                    android:text="@string/zone_moisture_title"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/btn_font"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/zoneName" />
+
+                <TextView
+                    android:id="@+id/lastMeasurement"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="24dp"
+                    android:fontFamily="@font/outfit_regular"
+                    android:text="@string/zone_moisture_text"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/body_text"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/moistureValue" />
+
+                <!--Moisture Value Circle-->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/mvCircleCard"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginEnd="32dp"
+                    app:cardBackgroundColor="@android:color/transparent"
+                    app:cardCornerRadius="55dp"
+                    app:cardElevation="0dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/zoneName">
+
+                    <ImageView
+                        android:id="@+id/mvCircle"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:contentDescription="@string/mvCircle"
+                        android:src="@drawable/visual_dial_high_manual" />
+
+                    <TextView
+                        android:id="@+id/mvCircleText"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/outfit_extrabold"
+                        android:gravity="center"
+                        android:text="@string/moisture_value_percentage"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/header"
+                        android:textStyle="bold" />
+                </androidx.cardview.widget.CardView>
+
+                <!--Watering Event-->
+                <TextView
+                    android:id="@+id/watering"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="80dp"
+                    android:fontFamily="@font/outfit_bold"
+                    android:text="@string/zone_manual_title"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/btn_font"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/lastMeasurement" />
+
+                <TextView
+                    android:id="@+id/lastWatered"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="24dp"
+                    android:fontFamily="@font/outfit_regular"
+                    android:text="@string/zone_last_watered"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/btn_font"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/watering" />
+
+                <!--Timer Circle-->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/timerCircleCard"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginEnd="32dp"
+                    app:cardBackgroundColor="@android:color/transparent"
+                    app:cardCornerRadius="55dp"
+                    app:cardElevation="0dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/mvCircleCard">
+
+                    <ImageView
+                        android:id="@+id/timerCircle"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:contentDescription="@string/timerCircle"
+                        android:src="@drawable/visual_dial_high_manual" />
+
+                    <TextView
+                        android:id="@+id/timer"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/outfit_extrabold"
+                        android:gravity="center"
+                        android:text="@string/timer_time"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/header"
+                        android:textStyle="bold" />
+                </androidx.cardview.widget.CardView>
+
+                <!--Water Button-->
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/waterButton"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="144dp"
+                    android:layout_height="144dp"
+                    android:layout_marginTop="40dp"
+                    android:background="@drawable/custom_watering_btn"
+                    android:clickable="true"
+                    android:fontFamily="@font/outfit_extrabold"
+                    android:text="@string/zone_btn"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/header"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/lastWatered"
+                    tools:ignore="SpeakableTextPresentCheck" />
+
+                <!--Water Stop Button-->
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/waterButtonStop"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="144dp"
+                    android:layout_height="144dp"
+                    android:layout_marginTop="40dp"
+                    android:background="@drawable/custom_watering_btn_stop"
+                    android:clickable="true"
+                    android:fontFamily="@font/outfit_extrabold"
+                    android:text="@string/zone_stop_btn"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/header"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/lastWatered"
+                    tools:ignore="SpeakableTextPresentCheck" />
+
+                <ImageView
+                    android:id="@+id/detailFooter"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:contentDescription="@string/footer"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/visual_footer_detail_manual"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <!--Delete Zone-->
+                <TextView
+                    android:id="@+id/deleteZone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="32dp"
+                    android:clickable="true"
+                    android:fontFamily="@font/outfit_bold"
+                    android:text="@string/zone_delete"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/btn_font"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!--Too Dry Warn Card-->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/isDryCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="-28dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="15dp"
+            app:cardElevation="0dp"
+            app:layout_constraintBottom_toTopOf="@id/cardView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="0.5dp"
+                android:contentDescription="@string/warningSymbol"
+                android:src="@drawable/warning_icon" />
+
+            <TextView
+                android:id="@+id/isDryText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="72dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:fontFamily="@font/outfit_bold"
+                android:text="@string/zone_warning_to_dry"
+                android:textColor="@color/black"
+                android:textSize="@dimen/btn_font"
+                android:textStyle="bold" />
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

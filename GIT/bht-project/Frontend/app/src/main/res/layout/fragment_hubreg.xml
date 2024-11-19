@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/creme"
+    tools:context=".views.WelcomeActivity">
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!--Message-->
+        <TextView
+            android:id="@+id/bloomerText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/outfit_extrabold"
+            android:text="@string/entry_text"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="@dimen/header"
+            android:textStyle="bold" />
+
+        <!--User Key Input-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/userKey"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="32dp"
+            app:boxBackgroundColor="@color/white"
+            app:startIconDrawable="@drawable/link_icon">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/userKeyInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/outfit_bold"
+                android:hint="@string/entry_display"
+                android:inputType="number"
+                android:textSize="@dimen/body_text"
+                android:textStyle="bold" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--Error Message with Symbol-->
+        <TextView
+            android:id="@+id/errorKeyEntry"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/outfit_regular"
+            android:gravity="center_vertical"
+            android:textColor="@color/red"
+            android:textSize="@dimen/moisture_text"
+            app:drawableStartCompat="@drawable/warning_icon" />
+
+        <!--Button to postUserKey-->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/userKeyButton"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="32dp"
+            android:background="@drawable/grey_button"
+            android:clickable="true"
+            android:fontFamily="@font/outfit_bold"
+            android:text="@string/entry_btn_send"
+            android:textAllCaps="false"
+            android:textColor="@color/grey"
+            android:textSize="@dimen/btn_font"
+            android:textStyle="bold" />
+
+        <!--Link for help page (not integrated)-->
+        <TextView
+            android:id="@+id/helpText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:clickable="true"
+            android:fontFamily="@font/outfit_bold"
+            android:text="@string/entry_help_text"
+            android:textAlignment="center"
+            android:textColor="@color/dark_blue"
+            android:textSize="@dimen/body_text"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!--Image of Bloom Box-->
+    <ImageView
+        android:id="@+id/bloomBox"
+        android:layout_width="160dp"
+        android:layout_height="180dp"
+        android:layout_marginBottom="16dp"
+        android:contentDescription="@string/bloomBox"
+        android:src="@drawable/visual_bloom_box_waiting"
+        app:layout_constraintBottom_toTopOf="@id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

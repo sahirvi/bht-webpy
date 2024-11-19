@@ -1,0 +1,43 @@
+{% extends 'home.html' %}
+{% load static %}
+
+{% block title %}Shopping cart{% endblock %}
+
+{% block content %}
+    <div class="bg-image" style="background-image: url('http://www.desktopwallpaperhd.net/wallpapers/12/f/pokemon-wallpaper-store-gotta-poliwrath-127055.jpg');
+      height: 100vh;">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-4">
+                    <h2>Shopping cart</h2>
+                    {% if shopping_cart_is_empty %}
+                        Your shopping cart is empty.<br>
+                    {% else %}
+                        {% for item in shopping_cart_items %}
+                            {{ item.product_name }}<br>
+                            {{ item.price }} € x{{ item.quantity }}<br>
+                            <br>
+                        {% endfor %}
+
+                        Total amount: {{ total }} €
+
+                        <br><br>
+                        <form method="POST">
+                            {% csrf_token %}
+                            <button type="submit" name="pay" class="btn btn-primary">Pay with credit card</button>
+                            <br>
+                            <br>
+                            <button type="submit" name="empty" class="btn btn-danger">Empty the shopping cart</button>
+                            <br>
+                        </form>
+                    {% endif %}
+
+                    <br>
+                    <a href="{% url 'pokemon-list' %}" class="btn btn-warning">Keep shopping the Pokemon's</a><br><br>
+                    <a href="{% url 'item-list' %}" class="btn btn-warning">Keep shopping the Item's</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

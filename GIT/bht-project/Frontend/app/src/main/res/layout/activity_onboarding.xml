@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/creme"
+    tools:context=".views.OnBoardingActivity">
+
+    <!--Background Image-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/onBoardingBackground"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/BG"
+            android:scaleType="fitXY"
+            android:src="@drawable/visual_background_onboarding_1" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!--Welcome Message-->
+        <TextView
+            android:id="@+id/onBoardingText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/outfit_extrabold"
+            android:text="@string/onboarding1"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="@dimen/header"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!--Continue Button 1-->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/continueButton1"
+            android:layout_width="156dp"
+            android:layout_height="51dp"
+            android:layout_below="@+id/onBoardingText"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/custom_button"
+            android:clickable="true"
+            android:fontFamily="@font/outfit_bold"
+            android:text="@string/onboardingButton"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/body_text"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/onBoardingText"
+            tools:ignore="DuplicateClickableBoundsCheck" />
+
+        <!--Continue Button 2-->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/continueButton2"
+            android:layout_width="156dp"
+            android:layout_height="51dp"
+            android:layout_below="@+id/onBoardingText"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/custom_button"
+            android:clickable="true"
+            android:fontFamily="@font/outfit_bold"
+            android:text="@string/onboardingButton"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/body_text"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/onBoardingText" />
+
+        <!--Continue Button 3-->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/continueButton3"
+            android:layout_width="156dp"
+            android:layout_height="51dp"
+            android:layout_below="@+id/onBoardingText"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/custom_button"
+            android:clickable="true"
+            android:fontFamily="@font/outfit_bold"
+            android:text="@string/onboardingButton"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/body_text"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/onBoardingText" />
+    </RelativeLayout>
+
+    <!--three dots-->
+    <ImageView
+        android:id="@+id/dot2"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="96dp"
+        android:contentDescription="@string/dots"
+        android:src="@drawable/dot"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/relativeLayout" />
+
+    <ImageView
+        android:id="@+id/dot1"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_marginTop="96dp"
+        android:layout_marginEnd="16dp"
+        android:contentDescription="@string/dots"
+        android:src="@drawable/dot"
+        app:layout_constraintEnd_toStartOf="@id/dot2"
+        app:layout_constraintTop_toBottomOf="@id/relativeLayout" />
+
+    <ImageView
+        android:id="@+id/dot3"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="96dp"
+        android:contentDescription="@string/dots"
+        android:src="@drawable/dot"
+        app:layout_constraintStart_toEndOf="@id/dot2"
+        app:layout_constraintTop_toBottomOf="@id/relativeLayout" />
+</androidx.constraintlayout.widget.ConstraintLayout>

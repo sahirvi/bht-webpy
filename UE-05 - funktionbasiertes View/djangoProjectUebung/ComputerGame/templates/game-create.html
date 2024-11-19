@@ -1,0 +1,46 @@
+{% extends 'home.html' %}
+
+{% block title %}Add Game{% endblock %}
+
+{% block logged_in_content %}
+<h2>Add a Game</h2>
+    <form method="POST">
+        {% csrf_token %}
+
+        <label for="{{ form.name.id_for_label }}">{{ form.name.label }}:</label>
+        <input id="{{ form.name.id_for_label }}" type="{{ form.name.field.widget.input_type }}" name="{{ form.name.html_name }}"><br><br>
+
+        {{ form.descriptionText.label }}:
+        {{ form.descriptionText }}<br><br>
+
+        <label for="id_genre">Genre:</label>
+        <select id="id_genre" type="text" name="genre">
+            <option value="sp">sports</option>
+            <option value="sim">simulation</option>
+            <option value="fps">first person shooters</option>
+            <option value="rpg">role playing</option>
+            <option value="pg">party games</option>
+            <option value="pzz">puzzle games</option>
+            <option value="rts">realtime strategy</option>
+            <option value="mba">multiplayer online battle arena</option>
+            <option value="aa">action adventures</option>
+        </select>
+        <br><br>
+
+        {{ form.USK.label }}:
+        {{ form.USK }}<br><br>
+
+        <label for="{{ form.creator.id_for_label }}">{{ form.creator.label }}:</label>
+        <input id="{{ form.creator.id_for_label }}" type="{{ form.creator.field.widget.input_type }}" name="{{ form.creator.html_name }}"><br><br>
+
+        {{ form.datePublished.label }}:
+        {{ form.datePublished }}<br><br>
+
+        <button type="submit">Add Game</button>
+    </form>
+{% endblock %}
+
+{% block not_logged_in_content %}
+    <p>You must log in to add games</p>
+    <a href="{% url 'login' %}">Login</a>
+{% endblock %}

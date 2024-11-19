@@ -1,0 +1,21 @@
+{% extends 'home.html' %}
+
+{% block title %}Report{% endblock %}
+{% block logged_in_content %}
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-4">
+
+                <h1>Thank you for the Report! </h1>
+                <div class="p-2">
+                    <a href="{% url 'home' %}" class="btn btn-primary">Back to Home</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+
+
+

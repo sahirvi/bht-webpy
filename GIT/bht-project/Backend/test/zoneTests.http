@@ -1,0 +1,139 @@
+### LOGIN WITH BASIC AUTHENTICATION
+# @name loginUser
+POST https://localhost:443/user/login
+Authorization: Basic Ymxvb21AbWFpbC5kZToxMjM=
+
+@bloomToken = {{loginUser.response.headers.Authorization}}
+
+### CREATE A ZONE WITH JSON BODY
+POST https://localhost:443/zone/addZone
+Authorization: {{bloomToken}}
+Content-Type: application/json
+
+{
+    "name": "Kräuter",
+    "hub_id": 1,
+    "zone_id": 1,
+    "is_dry": false,
+    "is_pending": false,
+    "is_watering": false
+}
+
+### GET ALL ZONES
+https://localhost:443/zone/getAllZones
+Authorization: {{bloomToken}}
+
+### GET ALL ZONES BY HUB ID
+https://localhost:443/zone/getAllZonesbyHubId/1
+Authorization: {{bloomToken}}
+
+### GET ZONE BY HUB ID AND ZONE ID (QUERY)
+https://localhost:443/zone/getZone?hub_id=1&zone_id=1
+Authorization: {{bloomToken}}
+
+
+### LOGIN AN HUB, GET TOKEN BACK AND CREATE USER_KEY IN HUB
+# @name hubRegistration
+POST https://localhost:443/hubRegistration/postHubRegistration
+Authorization: Basic MToxMjM0NTQzMjM1MzQ5NzU4NDMy
+
+@bloomHubToken = {{hubRegistration.response.headers.Authorization}}
+
+### GET ALL PENDING ZONES
+https://localhost:443/zone/getAllPendingZones/1
+Authorization: {{bloomHubToken}}
+
+
+### UPDATE PENDING STATUS
+PUT https://localhost:443/zone/updateZone?hub_id=1&zone_id=1
+Authorization: {{bloomToken}}
+Content-Type: application/json
+
+{
+    "is_pending": true
+}
+
+### UPDATE WATERING STATUS
+PUT https://localhost:443/zone/updateZone?hub_id=1&zone_id=1
+Authorization: {{bloomToken}}
+Content-Type: application/json
+
+{
+    "is_watering": false
+}
+
+### DELETE ZONE WITH HUB ID
+DELETE https://localhost:443/zone/deleteZone?hub_id=1&zone_id=1
+Authorization: {{bloomToken}}
+
+
+// ---------- Tests mit Server-Adresse ----------
+
+
+### LOGIN WITH BASIC AUTHENTICATION
+# @name loginUser
+POST https://217.160.45.110:443/user/login
+Authorization: Basic Ymxvb21AbWFpbC5kZTpibG9vbTEyMyEh
+
+@bloomToken = {{loginUser.response.headers.Authorization}}
+
+### CREATE A ZONE WITH JSON BODY
+POST https://217.160.45.110:443/zone/addZone
+Authorization: {{bloomToken}}
+Content-Type: application/json
+
+{
+
+    "name": "Kräuter",
+    "hub_id": 1,
+    "zone_id": 1,
+    "is_dry": false,
+    "is_pending": false,
+    "is_watering": false
+}
+
+### GET ALL ZONES
+https://217.160.45.110:443/zone/getAllZones
+Authorization: {{bloomToken}}
+
+### GET ALL ZONES BY HUB ID
+https://217.160.45.110:443/zone/getAllZonesbyHubId/1
+Authorization: {{bloomToken}}
+
+### GET ZONE BY HUB ID AND ZONE ID (QUERY)
+https://217.160.45.110:443/zone/getZone?hub_id=1&zone_id=1
+Authorization: {{bloomToken}}
+
+
+### LOGIN AN HUB, GET TOKEN BACK AND CREATE USER_KEY IN HUB
+# @name hubRegistration
+POST https://217.160.45.110:443/hubRegistration/postHubRegistration
+Authorization: Basic MToxMjM0NTQzMjM1MzQ5NzU4NDMy
+
+@bloomHubToken = {{hubRegistration.response.headers.Authorization}}
+
+### GET ALL PENDING ZONES
+https://217.160.45.110:443/zone/getAllPendingZones/1
+Authorization: {{bloomHubToken}}
+
+### UPDATE PENDING STATUS
+PUT https://217.160.45.110:443/zone/updateZone?hub_id=1&zone_id=1
+Authorization: {{bloomToken}}
+Content-Type: application/json
+
+{
+    "is_pending": true
+}
+
+### UPDATE WATERING STATUS
+PUT https://217.160.45.110:443/zone/updateZone?hub_id=1&zone_id=1
+Authorization: {{bloomToken}}
+Content-Type: application/json
+
+{
+    "is_watering": true
+}
+
+### DELETE HUB WITH HUB ID
+DELETE https://217.160.45.110:443/zone/deleteZone?hub_id=1&zone_id=1
+Authorization: {{bloomToken}}

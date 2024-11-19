@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/creme"
+    tools:context=".views.WelcomeActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!--Welcome Title-->
+        <TextView
+            android:id="@+id/welcomeEntryTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/outfit_extrabold"
+            android:text="@string/entry_welcome_title"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="@dimen/header"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!--Welcome Message-->
+        <TextView
+            android:id="@+id/welcomeEntryText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="56dp"
+            android:fontFamily="@font/outfit_bold"
+            android:text="@string/entry_welcome_text"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="@dimen/body_text"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/welcomeEntryTitle" />
+
+        <!--Button to get to Hub Reg Fragment-->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/yesButton"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="38dp"
+            android:layout_marginEnd="100dp"
+            android:background="@drawable/custom_button"
+            android:clickable="true"
+            android:fontFamily="@font/outfit_bold"
+            android:text="@string/entry_welcome_button"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/btn_font"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/welcomeEntryText" />
+
+        <!--Guidance for Bloom Box Setup (not integrated)-->
+        <TextView
+            android:id="@+id/helpText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:clickable="true"
+            android:fontFamily="@font/outfit_bold"
+            android:text="@string/entry_welcome_help"
+            android:textAlignment="center"
+            android:textColor="@color/dark_blue"
+            android:textSize="@dimen/body_text"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/yesButton" />
+
+    </LinearLayout>
+
+    <!--Image of Bloom Box-->
+    <ImageView
+        android:id="@+id/bloomBox"
+        android:layout_width="160dp"
+        android:layout_height="180dp"
+        android:layout_marginBottom="16dp"
+        android:contentDescription="@string/bloomBox"
+        android:src="@drawable/visual_bloom_box_waving"
+        app:layout_constraintBottom_toTopOf="@id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,112 @@
+### LOGIN WITH BASIC AUTHENTICATION
+# @name loginUser
+POST https://localhost:443/user/login
+Authorization: Basic Ymxvb21AbWFpbC5kZToxMjM=
+
+@bloomToken = {{loginUser.response.headers.Authorization}}
+
+### CREATE AN HUB WITH JSON BODY
+POST https://localhost:443/hub/addHub
+Authorization: {{bloomToken}}
+Content-Type: application/json
+
+{
+    "hub_id": 1,
+    "bucket_empty": false,
+    "outlet_count": 3,
+    "factory_key": "1234543235349758432",
+    "auto": false
+}
+
+### GET ALL HUBS
+GET https://localhost:443/hub/getAllHubs
+Authorization: {{bloomToken}}
+
+### LOGIN AN HUB, GET TOKEN BACK AND CREATE USER_KEY IN HUB
+# @name hubRegistration
+POST https://localhost:443/hubRegistration/postHubRegistration
+Authorization: Basic MToxMjM0NTQzMjM1MzQ5NzU4NDMy
+
+@bloomHubToken = {{hubRegistration.response.headers.Authorization}}
+
+### GET HUB BY HUB ID IN PARAMS
+GET https://localhost:443/hub/getHub/1
+Authorization: {{bloomToken}}
+
+### GET HUB BY EMAIL IN TOKEN
+GET https://localhost:443/hub/getHubByUser/
+Authorization: {{bloomToken}}
+
+### UPDATES HUB WITH HUB ID
+PUT https://localhost:443/hub/updateHub/1
+Authorization: {{bloomToken}}
+Content-Type: application/json
+
+{
+    "bucket_empty": false,
+    "outlet_count": 3,
+    "auto": true
+}
+
+### DELETE HUB WITH HUB ID
+DELETE https://localhost:443/hub/deleteHub/1
+Authorization: {{bloomToken}}
+
+
+// ---------- Tests mit Server-Adresse ----------
+
+
+### LOGIN WITH BASIC AUTHENTICATION
+# @name loginUser
+POST https://217.160.45.110:443/user/login
+Authorization: Basic Ymxvb21AbWFpbC5kZToxMjM=
+
+@bloomToken = {{loginUser.response.headers.Authorization}}
+
+### CREATE A HUB WITH JSON BODY
+POST https://217.160.45.110:443/hub/addHub
+Authorization: {{bloomToken}}
+Content-Type: application/json
+
+{
+    "hub_id": 1,
+    "bucket_empty": false,
+    "outlet_count": 3,
+    "factory_key": "1234543235349758432",
+    "auto": false
+}
+
+### GET ALL HUBS
+GET https://217.160.45.110:443/hub/getAllHubs
+Authorization: {{bloomToken}}
+
+
+### LOGIN AN HUB, GET TOKEN BACK AND CREATE USER_KEY IN HUB
+# @name hubRegistration
+POST https://217.160.45.110:443/hubRegistration/postHubRegistration
+Authorization: Basic MToxMjM0NTQzMjM1MzQ5NzU4NDMy
+
+@bloomHubToken = {{hubRegistration.response.headers.Authorization}}
+
+### GET HUB BY HUB ID IN PARAMS
+GET https://217.160.45.110:443/hub/getHub/1
+Authorization: {{bloomToken}}
+
+### GET HUB BY EMAIL IN TOKEN
+GET https://217.160.45.110:443/hub/getHubByUser/
+Authorization: {{bloomToken}}
+
+### UPDATES HUB WITH HUB ID
+PUT https://217.160.45.110:443/hub/updateHub/1
+Authorization: {{bloomHubToken}}
+Content-Type: application/json
+
+{
+    "bucket_empty": false,
+    "outlet_count": 3,
+    "auto": true
+}
+
+### DELETE HUB WITH HUB ID
+DELETE https://217.160.45.110:443/hub/deleteHub/1
+Authorization: {{bloomToken}}

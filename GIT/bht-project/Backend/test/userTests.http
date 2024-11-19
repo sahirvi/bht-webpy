@@ -1,0 +1,95 @@
+### CREATE AN USER WITH JSON BODY
+POST https://localhost:443/user/register
+Content-Type: application/json
+
+{
+    "email": "bloom@mail.de",
+    "password": "123",
+    "role": "admin"
+}
+
+### LOGIN WITH BASIC AUTHENTICATION
+# @name loginUser
+POST https://localhost:443/user/login
+Authorization: Basic Ymxvb21AbWFpbC5kZToxMjM=
+
+@bloomToken = {{loginUser.response.headers.Authorization}}
+
+### GET USER BY USER ID
+GET https://localhost:443/user/getUser/bloom@mail.de
+Authorization: {{bloomToken}}
+
+
+### UPDATES USER WITH USER ID
+PUT https://localhost:443/user/updateUser/bloom@mail.de
+Authorization: {{bloomToken}}
+Content-Type: application/json
+
+{
+    "password": "1234"
+}
+
+### MAP USER WITH EMAIL TO HUB WITH USER_KEY
+POST https://localhost:443/user/postUserKey
+Authorization: {{bloomToken}}
+Content-Type: application/json
+
+{
+    "user_key": 324053079,
+    "email": "bloom@mail.de"
+}
+
+### DELETE USER WITH USER ID
+DELETE https://localhost:443/user/deleteUser/bloom@mail.de
+Authorization: {{bloomToken}}
+
+
+// ---------- Tests mit Server-Adresse ----------
+
+
+### CREATE A HUB WITH JSON BODY
+POST https://217.160.45.110:443/user/register
+Content-Type: application/json
+
+{
+    "email": "bloom@mail.de",
+    "password": "123",
+    "role": "admin"
+}
+
+### LOGIN WITH BASIC AUTHENTICATION
+# @name loginUser
+POST https://217.160.45.110:443/user/login
+Authorization: Basic Ymxvb21AbWFpbC5kZToxMjM=
+
+@bloomToken = {{loginUser.response.headers.Authorization}}
+
+### GET USER BY USER ID
+GET https://217.160.45.110:443/user/getUser/bloom@mail.de
+Authorization: {{bloomToken}}
+
+
+### UPDATES USER WITH USER ID
+PUT https://217.160.45.110:443/user/updateUser/bloom@mail.de
+Authorization: {{bloomToken}}
+Content-Type: application/json
+
+{
+    "password": "1234"
+}
+
+### MAP USER WITH EMAIL TO HUB WITH USER_KEY
+POST https://217.160.45.110:443/user/postUserKey
+Authorization: {{bloomToken}}
+Content-Type: application/json
+
+{
+    "user_key": 324053079,
+    "email": "bloom@mail.de"
+}
+
+### DELETE USER WITH USER ID
+DELETE https://217.160.45.110:443/user/deleteUser/bloom@mail.de
+Authorization: {{bloomToken}}
+
+

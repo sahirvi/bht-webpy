@@ -1,0 +1,49 @@
+{% extends 'home.html' %}
+{% load static %}
+
+{% block title %}Item's List{% endblock %}
+
+{% block content %}
+    <div class="bg-image" style="background-image: url('https://i.imgur.com/eGPvZpS.jpeg');">
+    <h1>Item's List</h1>
+    <div class="d-flex">
+
+        <div class="row justify-content-left">
+
+            <ul>
+                {% for item in all_the_items %}
+                    <a href="{{ item.id }}/"><b>{{ item.name }}</b></a><br>
+                    <!-- Alternative link:
+        <a href="{% url 'item-detail' item.id %}">
+        -->
+                    {{ item.price }} €<br>
+                    <a href="{% url 'item-pdf' item.id %}">
+                        <button class="btn btn-primary">PDF</button>
+                    </a>
+                    <br>
+                    <br>
+
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+    <div class="container">
+    <div class="row justify-content-center">
+    <div class="col-4">
+        <h1>Explore!</h1>
+        {% if user.can_edit %}
+            <div class="p-2">
+                <a href="{% url 'item-create' %}" class="btn btn-primary">Add a new Item</a><br>
+            </div>
+        {% endif %}
+        <div class="p-2">
+            <a href="{% url 'item-search' %}" class="btn btn-primary">Search an item</a><br>
+        </div>
+        <div class="p-2">
+            <a href="{% url 'home' %}" class="btn btn-primary">Back to Home</a>
+        </div>
+    </div>
+{% endblock %}
+</div>
+</div>
+</div>

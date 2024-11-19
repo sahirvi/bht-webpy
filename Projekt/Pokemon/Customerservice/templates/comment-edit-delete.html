@@ -1,0 +1,25 @@
+{% extends 'home.html' %}
+{% load static %}
+{% load crispy_forms_filters %}
+
+{% block title %}Comment Edit and Delete{% endblock %}
+
+{% block logged_in_content %}
+    <h2>Comment Edit and Delete</h2>
+    {% if not can_edit %}
+        You are not authorized to edit or delete comments.<br><br>
+    {% endif %}
+
+    <b style="color: darkgreen">{{ comment.myuser.username }} on {{ comment.timestamp }}</b><br>
+    {% if can_edit %}
+        <form method="POST">
+            {% csrf_token %}
+            {{ form|crispy }}
+            <input type="hidden" id="comment_id" name="comment_id" value="{{ comment.id }}">
+            <button type="submit" name="edit">Edit</button>
+            <button type="submit" name="delete">Delete</button>
+        </form>
+    {% else %}
+        {{ comment.text }}<br>
+    {% endif %}
+{% endblock %}

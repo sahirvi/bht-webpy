@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ that_one_item.name }}</title>
+</head>
+<body>
+<table>
+    <tr>
+        <td>
+            <img src="{{ that_one_item.product_picture.path }}" height="200" width="200" alt="Produktbild"><br>
+        </td>
+    </tr>
+    <tr>
+        <td><b>Name:</b></td>
+        <td>{{ that_one_item.name }}<br></td>
+    </tr>
+    <tr>
+        <td><b>Description:</b></td>
+        <td>{{ that_one_item.description }}<br></td>
+    </tr>
+    <tr>
+        <td><b>Entered by:</b></td>
+        <td>{{ that_one_item.myuser.username }}<br></td>
+    </tr>
+    <tr>
+        <td><b>Price:</b></td>
+        <td>{{ that_one_item.price }} €<br></td>
+    </tr>
+</table>
+</body>
+</html>

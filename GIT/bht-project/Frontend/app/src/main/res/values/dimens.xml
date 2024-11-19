@@ -1,0 +1,18 @@
+<resources>
+    <!--Splash-->
+    <dimen name="splash_font">50sp</dimen>
+    <!--Welcome-->
+    <dimen name="welcome_text_font">38sp</dimen>
+    <!--toolbar-->
+    <dimen name="logo_font">24sp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <!--fonts-->
+    <dimen name="header">24sp</dimen>
+    <dimen name="body_text">16sp</dimen>
+    <dimen name="btn_font">16sp</dimen>
+    <dimen name="error">16sp</dimen>
+    <dimen name="moisture_text">12sp</dimen>
+
+
+
+</resources>

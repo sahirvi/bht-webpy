@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="main_hue">#1D5943</color>
+    <color name="secondary_hue">#AFE2D0</color>
+    <color name="primary_font">#000000</color>
+    <color name="secondary_font">#FFFFFF</color>
+    <color name="ButtonRot">#E11010</color>
+    <color name="dark_gray">#6B6B6B</color>
+    <color name="light_gray">#A9A9A9</color>
+    <color name="GeneralFont">#000000</color>
+    <color name="CircleColor">#3FA36E</color>
+    <color name="DarkGreenFont">#004F25</color>
+    <color name="DarkYellowFont">#99935D</color>
+    <color name="DarkBlueFont">#758399</color>
+    <color name="TachoFont">#ACDFC4</color>
+    <color name="GreenContainer">#ACDFC4</color>
+    <color name="WaterContainer">#72A2EA</color>
+    <color name="WarnContainer">#FFF59B</color>
+    <color name="LightContainer">#E8F4EE</color>
+    <color name="WarnColor">#FFAA04</color>
+    <color name="WateringButtonDark">#72A2EA</color>
+    <color name="WateringButtonLight">#BFD6F9</color>
+    <color name="WateringButtonStopDark">#F2616D</color>
+    <color name="WateringButtonStopLight">#FF8888</color>
+    <color name="blueFont">#334766</color>
+
+    <!--new colors-->
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="grey">#808080</color>
+    <color name="light_grey">#DFDFDF</color>
+    <color name="creme">#FAF6E9</color>
+    <color name="red">#EB573D</color>
+    <color name="light_green">#C0E8D3</color>
+    <color name="dark_green">#007C86</color>
+    <color name="light_blue">#BFD6F9</color>
+    <color name="dark_blue">#505DA7</color>
+
+</resources>

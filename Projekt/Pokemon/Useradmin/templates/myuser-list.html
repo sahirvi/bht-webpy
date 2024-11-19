@@ -1,0 +1,32 @@
+{% extends 'home.html' %}
+
+{% block title %}Users list{% endblock %}
+
+{% block content %}
+    <div class="bg-image" style="background-image: url(https://img.wallpapersafari.com/desktop/1920/1080/77/68/GFIKPr.jpg);
+      ">
+    <div class="container">
+    <div class="row justify-content-center text-white">
+    <div class="col-4">
+    <h2>Users list</h2>
+    <ul>
+        {% for myuser in all_myusers %}
+            {{ myuser.first_name }} {{ myuser.last_name }} ({{ myuser.date_of_birth }})<br>
+            {% if myuser.profile_picture %}
+                <b>Favourite Pokémon:</b>
+                {{ myuser.favourite_pokemon }}<br>
+                <img src="{{ myuser.profile_picture.url }}" height="150" width="150" alt="Profilbild"><br>
+            {% endif %}
+
+            {% if myuser.some_file %}
+                <a href="{{ myuser.some_file.url }}">Some uploaded file</a><br>
+            {% endif %}
+            <br>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'home' %}" class="btn btn-warning">Back to Home</a>
+{% endblock %}
+</div>
+</div>
+</div>
+</div>

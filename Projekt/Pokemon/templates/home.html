@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}POKÉSHOP{% endblock %}
+
+{% block header %}
+    <a style="float: right;" href="{% url 'shopping-cart-show' %}">
+        {% if user.is_authenticated %}
+            Shopping Cart (
+            {% if user.is_authenticated %}
+                {{ request.user.count_shopping_cart_items }}
+            {% else %}
+                0
+            {% endif %}
+            )
+        {% endif %}
+    </a>
+{% endblock %}
+
+
+{% block content %}
+    {% if user.is_authenticated %}
+        {% block logged_in_content %}
+            <div class="bg-image" style="background-image: url(https://i.imgur.com/iCU8kno.jpeg);
+      height: 100vh;">
+            <div class="container">
+                <div style="background:transparent !important" class="jumbotron">
+                    <div class="row justify-content-center">
+                        <div class="col-6">
+                            <h1>Greetings Trainer : {{ user.username }} </h1>
+                            <h2>Welcome to the PokéShop , take your time and explore as much as you like</h2>
+                            <br>
+                            <div class="float-left ">
+                                <p><a href="{% url 'pokemon-list' %}" class="btn btn-warning stretched-link">Show me the
+                                    Pokémon's</a></p>
+                                <p><a href="{% url 'item-list' %}" class="btn btn-danger stretched-link">Show me the
+                                    Items</a></p>
+                                <p><a href="{% url 'myuser-list' %}" class="btn btn-primary stretched-link">Show me the
+                                    Users</a></p>
+                                <br>
+                                {% if user.can_edit %}
+                                    <p><a href="{% url 'comment-show' %}" class="btn btn-primary stretched-link">Customerservice</a>
+                                    </p>
+                                {% endif %}
+                                <br>
+                                <a href="{% url 'logout' %}" class="btn btn-primary stretched-link">Logout</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        {% endblock %}
+    {% else %}
+        {% block not_logged_in_content %}
+            <div class="bg-image" style="background-image: url(https://i.imgur.com/rEWUdzp.jpeg);
+      height: 100vh;">
+            <div class="container">
+            <div style="background:transparent !important" class="jumbotron">
+            <div class="row justify-content-center">
+            <div class="col-6">
+            <h1>Welcome to PokéShop</h1>
+            <p>Please Register to Continue your Journey !</p>
+            <a href="{% url 'login' %}" class="btn btn-primary stretched-link">Login</a>
+            <a href="{% url 'signup' %}" class="btn btn-primary stretched-link">Signup</a>
+        {% endblock %}
+    {% endif %}
+{% endblock %}
+</div>
+</div>
+</div>
+</div>
+</div>

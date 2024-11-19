@@ -1,0 +1,65 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.Test_project" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/grey</item>
+        <item name="colorPrimaryVariant">@color/black</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/black</item>
+        <item name="colorSecondaryVariant">@color/black</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">@font/outfit_regular</item>
+        <item name="textInputStyle">@style/TextInputLayoutStyle</item>
+
+    </style>
+
+    <style name="TextInputLayoutStyle"
+        parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxStrokeColor">@color/creme</item>
+        <item name="boxStrokeWidth">0dp</item>
+        <item name="errorEnabled">true</item>
+        <item name="cornerRadius">9dp</item>
+        <item name="fontFamily">@font/outfit_bold</item>
+        <item name="android:textStyle">bold</item>
+
+<!--        <item name="hintTextColor">@color/text_color</item>-->
+    </style>
+
+    <style name="Theme.Test_project.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Custom.Widget.SwitchCompat" parent="Widget.AppCompat.CompoundButton.Switch" >
+        <item name="android:textColorPrimary">@color/dark_blue</item>
+        <item name="colorControlActivated">@color/dark_blue</item>
+        <!-- Inactive thumb color -->
+        <item name="colorSwitchThumbNormal">@color/dark_green</item>
+        <!-- Inactive track color(30% transparency) -->
+        <item name="android:colorForeground">@color/dark_green</item>
+    </style>
+
+    <!-- Blue Theme -->
+
+    <style name="autoTheme">
+        <item name="android:background">@color/WaterContainer</item>
+    </style>
+    <style name="manualTheme">
+        <item name="android:background">@color/GreenContainer</item>
+    </style>
+
+    <!--Green Theme-->
+
+    <!--
+    <style name="Theme.Test_project.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.Test_project.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />-->
+</resources>

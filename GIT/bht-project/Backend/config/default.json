@@ -1,0 +1,50 @@
+{
+    "session": {
+        "tokenKey": "./certificates/key.pem",
+        "tokenAlgorithm": "HS256",
+        "tokenExpiry": 500,
+        "tokenRenewal": 30
+    },
+    "db": {
+        "url": "mongodb://localhost/BloomData"
+    },
+    "serverIP": {
+        "ip": "https://217.160.45.110:443/"
+    },
+    "authorization": {
+        "grants": {
+            "user": {
+                "users": {
+                    "read:own": [
+                        "*",
+                        "!password"
+                    ],
+                    "update:own": [
+                        "*"
+                    ],
+                    "delete:own": [
+                        "*"
+                    ]
+                }
+            },
+            "admin": {
+                "users": {
+                    "create:any": [
+                        "*"
+                    ],
+                    "read:any": [
+                        "*",
+                        "!password"
+                    ],
+                    "update:any": [
+                        "*",
+                        "!_id"
+                    ],
+                    "delete:any": [
+                        "*"
+                    ]
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,49 @@
+{% extends 'home.html' %}
+{% load static %}
+
+{% block title %}Add Item's{% endblock %}
+
+{% block logged_in_content %}
+    <div class="bg-image" style="background-image: url('https://i.imgur.com/YcVQBDc.png');
+      height: 100vh;">
+    <div class="container">
+    <div class="row justify-content-center">
+    <div class="col-4">
+    <h2>Add a Item</h2>
+    {% if not can_edit %}
+        You are not authorized to add Item's.<br><br>
+    {% endif %}
+    {% if can_edit %}
+        <form method="Post" enctype="multipart/form-data">
+            {% csrf_token %}
+
+            <label for="{{ form.name.id_for_label }}">{{ form.name.label }}:</label>
+            <input id="{{ form.name.id_for_label }}" type="{{ form.name.field.widget.input_type }}"
+                   name="{{ form.name.html_name }}"><br><br>
+
+            {{ form.product_picture.label }}:
+            {{ form.product_picture }}<br><br>
+
+            {{ form.price.label }}:
+            {{ form.price }}<br><br>
+
+            <label for="{{ form.description.id_for_label }}">{{ form.description.label }}:</label>
+            <textarea id="{{ form.description.id_for_label }}" type="{{ form.description.field.widget.input_type }}"
+                      name="{{ form.description.html_name }}"></textarea><br><br>
+
+            <button type="submit">Add Item</button>
+            <br><br>
+
+            <a href={% url 'item-list' %}>Back to all Item's</a>
+        </form>
+    {% endif %}
+    </div>
+    </div>
+    </div>
+    </div>
+{% endblock %}
+
+{% block not_logged_in_content %}
+    <p>You must log in to add Items</p>
+    <a href="{% url 'login' %}">Login</a>
+{% endblock %}

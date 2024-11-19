@@ -1,0 +1,36 @@
+{% extends 'home.html' %}
+{% load static %}
+{% load crispy_forms_filters %}
+
+{% block title %}Payment{% endblock %}
+
+{% block content %}
+    <div class="bg-image" style="background-image: url('http://www.desktopwallpaperhd.net/wallpapers/12/f/pokemon-wallpaper-store-gotta-poliwrath-127055.jpg');
+      height: 100vh;">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-4">
+                    <h2>Payment</h2>
+                    {% if paid %}
+                        Thank you for your payment.<br><br>
+                    {% elif shopping_cart_is_empty %}
+                        Your shopping cart is empty. There is nothing to pay for.<br><br>
+                    {% else %}
+                        <form method="POST">
+                            {% csrf_token %}
+                            {{ payment_form|crispy }}
+                            <input type="hidden" id="shopping_cart_id" name="shopping_cart_id"
+                                   value="{{ shopping_cart.id }}">
+                            <button type="submit" name="Pay" class="btn btn-success">Pay</button>
+                        </form>
+                        <br>
+                        <a href="{% url 'pokemon-list' %}" class="btn btn-primary"> Keep shopping the Pokemon's</a>
+                        <br>
+                        <br>
+                        <a href="{% url 'item-list' %}" class="btn btn-primary">Keep shopping the Item's</a>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

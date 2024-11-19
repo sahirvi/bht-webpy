@@ -1,0 +1,21 @@
+User Data:
+
+Username: sahiram
+Password: Webpy
+(SuperUser)
+
+Username: albert
+Password: Webpy
+(SuperUser)
+
+Username: amy
+Password: Webpy
+(CustomerService)
+
+Username: james
+Password: Webpy2021
+(Customer)
+
+Username: jessie
+Password: Webpy2021
+(Customer)

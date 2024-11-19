@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/dash_warn_card"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:background="@drawable/custom_warn"
+    android:padding="16dp"
+    android:clickable="true"
+    >
+
+    <ImageView
+        android:id="@+id/warn_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/ic_baseline_warning_24"
+        tools:tint="@color/red" />
+
+    <TextView
+        android:id="@+id/dash_warn_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginVertical="2dp"
+        android:layout_toStartOf="@+id/forward_arrow"
+        android:layout_toEndOf="@+id/warn_icon"
+        android:text="Erde zu trocken"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/dash_warn_zone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dash_warn_message"
+        android:layout_marginStart="8dp"
+        android:layout_marginVertical="2dp"
+        android:layout_toStartOf="@+id/forward_arrow"
+        android:layout_toEndOf="@+id/warn_icon"
+        android:hint="Bitte gieß Zone"
+        android:textColor="@color/black"
+        android:textSize="16sp" />
+
+    <ImageButton
+        android:id="@+id/forward_arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/forward_icon" />
+
+</RelativeLayout>
